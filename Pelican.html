@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="Sarang Jaiswal" />
+<meta name="description" content="Pelican - Static WebSite Generator This is a quick tutorial on how to create a Static Website using Pelican. What is a Pelican? Pelican is a open source static website generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found here The Basics …" />
+<meta name="keywords" content="Python, Pelican, Static Website">
+
+<meta property="og:site_name" content="Sarang Jaiswal"/>
+<meta property="og:title" content="Pelican - Static Website Generator"/>
+<meta property="og:description" content="Pelican - Static WebSite Generator This is a quick tutorial on how to create a Static Website using Pelican. What is a Pelican? Pelican is a open source static website generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found here The Basics …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/Pelican.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-12-07 00:00:00-06:00"/>
+<meta property="article:modified_time" content="2018-12-08 00:00:00-06:00"/>
+<meta property="article:author" content="/author/sarang-jaiswal.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Static Website"/>
+<meta property="og:image" content="">
+
+  <title>Sarang Jaiswal &ndash; Pelican - Static Website Generator</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://sarangjaiswal.github.io/" target="_blank">Home</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li><a class="sc-LinkedIn" href="https://www.linkedin.com/in/sarangjaiswal/" target="_blank">
+            <i class="fab fa-LinkedIn">
+            </i>
+          </a></li>
+          <li><a class="sc-Twitter" href="https://twitter.com/_sarang82" target="_blank">
+            <i class="fab fa-Twitter">
+            </i>
+          </a></li>
+          <li><a class="sc-Instagram" href="https://www.instagram.com/_sarang82/" target="_blank">
+            <i class="fab fa-Instagram">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="/Pelican.html">en</a>
+        <a href="/Pelican.html">en</a>
+    </div>
+
+    <h1 id="Pelican">Pelican - Static Website Generator</h1>
+    <p>
+          Posted on Fri 07 December 2018 in <a href="/category/python.html">Python</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Pelican - Static WebSite Generator</h1>
+<p><img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;v=4"></p>
+<p>This is a quick tutorial on how to create a Static Website using <a href="https://github.com/getpelican">Pelican</a>.  </p>
+<h2>What is a Pelican?</h2>
+<p><strong>Pelican</strong> is a open source <a href="https://en.wikipedia.org/wiki/Static_web_page">static website</a> generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found <a href="https://github.com/getpelican/pelican/blob/master/README.rst">here</a></p>
+<h2>The Basics</h2>
+<p>Before we get started, lets install Pelican. I will be demonstating this on MacOS but the steps are more or less similar for other Platforms too.</p>
+<div class="highlight"><pre><span></span>SarangMac:~ sarangjaiswal$ pip install pelican
+Collecting pelican
+Using cached https://files.pythonhosted.org/packages/a4/80/0a474a4aa30fab1666f63c2118d89bcbc05dc3180d791ab90d5e90b7f2e0/pelican-4.0.1-py2.py3-none-any.whl
+Requirement already satisfied: unidecode in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.0.23)
+Requirement already satisfied: blinker in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.4)
+Requirement already satisfied: docutils in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (0.14)
+Requirement already satisfied: pytz&gt;=0a in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2018.7)
+Requirement already satisfied: python-dateutil in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.7.5)
+Requirement already satisfied: six&gt;=1.4 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.11.0)
+Requirement already satisfied: feedgenerator&gt;=1.9 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.9)
+Requirement already satisfied: pygments in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.3.0)
+Requirement already satisfied: jinja2&gt;=2.7 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.10)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from jinja2&gt;=2.7-&gt;pelican) (1.1.0)
+Installing collected packages: pelican
+Successfully installed pelican-4.0.1
+</pre></div>
+
+
+<p>I tell you about all the extra syntaxes and capabilities I have, I'll introduce you to the basics of standard markdown. If you already know markdown, and want to jump straight to learning about the fancier things I can do, I suggest you skip to the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>. Lets jump right in.  </p>
+<h3>Line Breaks</h3>
+<p>To force a line break, put two spaces and a newline (return) at the end of the line.</p>
+<ul>
+<li>
+<p>This two-line bullet 
+won't break</p>
+</li>
+<li>
+<p>This two-line bullet<br>
+will break</p>
+</li>
+</ul>
+<p>Here is the code:</p>
+<div class="highlight"><pre><span></span>* This two-line bullet 
+won&#39;t break
+
+* This two-line bullet  
+will break
+</pre></div>
+
+
+<h3>Strong and Emphasize</h3>
+<p><strong>Strong</strong>: <code>**Strong**</code> or <code>__Strong__</code> (Command-B)<br>
+<em>Emphasize</em>: <code>*Emphasize*</code> or <code>_Emphasize_</code><sup id="fnref:emphasize"><a class="footnote-ref" href="#fn:emphasize" rel="footnote">2</a></sup> (Command-I)</p>
+<h3>Headers (like this one!)</h3>
+<div class="highlight"><pre><span></span><span class="gh">Header 1</span>
+<span class="gh">========</span>
+
+<span class="gh">Header 2</span>
+<span class="gh">--------</span>
+</pre></div>
+
+
+<p>or</p>
+<div class="highlight"><pre><span></span># Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+</pre></div>
+
+
+<h3>Links and Email</h3>
+<h4>Inline</h4>
+<p>Just put angle brackets around an email and it becomes clickable: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#114;&#97;&#110;&#117;&#115;&#106;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#117;&#114;&#97;&#110;&#117;&#115;&#106;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a><br>
+<code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+<p>Same thing with urls: <a href="http://macdown.uranusjr.com">http://macdown.uranusjr.com</a><br>
+<code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
+<p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title">Macdown Website</a><br>
+<code>[Macdown Website](http://macdown.uranusjr.com "Title")</code> (The title is optional)  </p>
+<h4>Reference style</h4>
+<p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
+<p>Make <a href="http://macdown.uranusjr.com" title="Title">a link</a> <code>[a link][arbitrary_id]</code> then on it's own line anywhere else in the file:<br>
+<code>[arbitrary_id]: http://macdown.uranusjr.com "Title"</code></p>
+<p>If the link text itself would make a good id, you can link <a href="http://macdown.uranusjr.com">like this</a> <code>[like this][]</code>, then on it's own line anywhere else in the file:<br>
+<code>[like this]: http://macdown.uranusjr.com</code>  </p>
+<h3>Images</h3>
+<h4>Inline</h4>
+<p><code>![Alt Image Text](path/or/url/to.jpg "Optional Title")</code></p>
+<h4>Reference style</h4>
+<p><code>![Alt Image Text][image-id]</code><br>
+on it's own line elsewhere:<br>
+<code>[image-id]: path/or/url/to.jpg "Optional Title"</code></p>
+<h3>Lists</h3>
+<ul>
+<li>Lists must be preceded by a blank line (or block element)</li>
+<li>Unordered lists start each item with a <code>*</code></li>
+<li><code>-</code> works too<ul>
+<li>Indent a level to make a nested list<ol>
+<li>Ordered lists are supported.</li>
+<li>Start each item (number-period-space) like <code>1.</code></li>
+<li>It doesn't matter what number you use, I will render them sequentially</li>
+<li>So you might want to start each line with <code>1.</code> and let me sort it out</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is the code:</p>
+<div class="highlight"><pre><span></span>* Lists must be preceded by a blank line (or block element)
+* Unordered lists start each item with a `*`
+- `-` works too
+    * Indent a level to make a nested list
+        1. Ordered lists are supported.
+        2. Start each item (number-period-space) like `1. `
+        42. It doesn&#39;t matter what number you use, I will render them sequentially
+        1. So you might want to start each line with `1.` and let me sort it out
+</pre></div>
+
+
+<h3>Block Quote</h3>
+<blockquote>
+<p>Angle brackets <code>&gt;</code> are used for block quotes.<br>
+Technically not every line needs to start with a <code>&gt;</code> as long as
+there are no empty lines between paragraphs.<br>
+Looks kinda ugly though.</p>
+<blockquote>
+<p>Block quotes can be nested.  </p>
+<blockquote>
+<p>Multiple Levels</p>
+</blockquote>
+</blockquote>
+<p>Most markdown syntaxes work inside block quotes.</p>
+<ul>
+<li>Lists</li>
+<li><a href="http://macdown.uranusjr.com" title="Title">Links</a></li>
+<li>Etc.</li>
+</ul>
+</blockquote>
+<p>Here is the code:</p>
+<div class="highlight"><pre><span></span>&gt; Angle brackets `&gt;` are used for block quotes.  
+Technically not every line needs to start with a `&gt;` as long as
+there are no empty lines between paragraphs.  
+&gt; Looks kinda ugly though.
+&gt; &gt; Block quotes can be nested.  
+&gt; &gt; &gt; Multiple Levels
+&gt;
+&gt; Most markdown syntaxes work inside block quotes.
+&gt;
+&gt; * Lists
+&gt; * [Links][arbitrary_id]
+&gt; * Etc.
+</pre></div>
+
+
+<h3>Inline Code</h3>
+<p><code>Inline code</code> is indicated by surrounding it with backticks:<br>
+<code>`Inline code`</code></p>
+<p>If your <code>code has `backticks`</code> that need to be displayed, you can use double backticks:<br>
+<code>``Code with `backticks` ``</code>  (mind the spaces preceding the final set of backticks)</p>
+<h3>Block Code</h3>
+<p>If you indent at least four spaces or one tab, I'll display a code block.</p>
+<div class="highlight"><pre><span></span>print(&#39;This is a code block&#39;)
+print(&#39;The block must be preceded by a blank line&#39;)
+print(&#39;Then indent at least 4 spaces or 1 tab&#39;)
+    print(&#39;Nesting does nothing. Your code is displayed Literally&#39;)
+</pre></div>
+
+
+<p>I also know how to do something called <a href="#fenced-code-block">Fenced Code Blocks</a> which I will tell you about later.</p>
+<h3>Horizontal Rules</h3>
+<p>If you type three asterisks <code>***</code> or three dashes <code>---</code> on a line, I'll display a horizontal rule:</p>
+<hr>
+<h2><a name="markdown-pane"></a>The Markdown Preference Pane</h2>
+<p>This is where I keep all preferences related to how I parse markdown into html.<br>
+<img alt="Markdown preferences pane" src="http://d.pr/i/RQEi+"></p>
+<h3>Document Formatting</h3>
+<p>The <strong><em>Smartypants</em></strong> extension automatically transforms straight quotes (<code>"</code> and <code>'</code>) in your text into typographer’s quotes (<code>“</code>, <code>”</code>, <code>‘</code>, and <code>’</code>) according to the context. Very useful if you’re a typography freak like I am. Quote and Smartypants are syntactically incompatible. If both are enabled, Quote takes precedence.</p>
+<h3>Block Formatting</h3>
+<h4>Table</h4>
+<p>This is a table:</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>You can align cell contents with syntax like this:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Left Aligned</th>
+<th align="center">Center Aligned</th>
+<th align="right">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">col 3 is</td>
+<td align="center">some wordy text</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>The left- and right-most pipes (<code>|</code>) are only aesthetic, and can be omitted. The spaces don’t matter, either. Alignment depends solely on <code>:</code> marks.</p>
+<h4><a name="fenced-code-block">Fenced Code Block</a></h4>
+<p>This is a fenced code block:</p>
+<div class="highlight"><pre><span></span>print(&#39;Hello world!&#39;)
+</pre></div>
+
+
+<p>You can also use waves (<code>~</code>) instead of back ticks (<code>`</code>):</p>
+<div class="highlight"><pre><span></span>print(&#39;Hello world!&#39;)
+</pre></div>
+
+
+<p>You can add an optional language ID at the end of the first line. The language ID will only be used to highlight the code inside if you tick the <strong><em>Enable highlighting in code blocks</em></strong> option. This is what happens if you enable it:</p>
+<p><img alt="Syntax highlighting example" src="http://d.pr/i/9HM6+"></p>
+<p>I support many popular languages as well as some generic syntax descriptions that can be used if your language of choice is not supported. See <a href="http://macdown.uranusjr.com/features/">relevant sections on the official site</a> for a full list of supported syntaxes.</p>
+<h3>Inline Formatting</h3>
+<p>The following is a list of optional inline markups supported:</p>
+<table>
+<thead>
+<tr>
+<th>Option name</th>
+<th>Markup</th>
+<th>Result if enabled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intra-word emphasis</td>
+<td>So A*maz*ing</td>
+<td>So A<em>maz</em>ing</td>
+</tr>
+<tr>
+<td>Strikethrough</td>
+<td>\~~Much wow\~~</td>
+<td><del>Much wow</del></td>
+</tr>
+<tr>
+<td>Underline <sup id="fnref:under"><a class="footnote-ref" href="#fn:under" rel="footnote">3</a></sup></td>
+<td>_So doge_</td>
+<td><u>So doge</u></td>
+</tr>
+<tr>
+<td>Quote <sup id="fnref:quote"><a class="footnote-ref" href="#fn:quote" rel="footnote">4</a></sup></td>
+<td>\"Such editor\"</td>
+<td><q>Such editor</q></td>
+</tr>
+<tr>
+<td>Highlight</td>
+<td>\==So good\==</td>
+<td><mark>So good</mark></td>
+</tr>
+<tr>
+<td>Superscript</td>
+<td>hoge\^(fuga)</td>
+<td>hoge<sup>fuga</sup></td>
+</tr>
+<tr>
+<td>Autolink</td>
+<td>http://t.co</td>
+<td><a href="http://t.co">http://t.co</a></td>
+</tr>
+<tr>
+<td>Footnotes</td>
+<td>[\^4] and [\^4]:</td>
+<td><sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">1</a></sup> and footnote 4</td>
+</tr>
+</tbody>
+</table>
+<h2><a name="rendering-pane"></a>The Rendering Preference Pane</h2>
+<p>This is where I keep preferences relating to how I render and style the parsed markdown in the preview window.<br>
+<img alt="Rendering preferences pane" src="http://d.pr/i/rT4d+"></p>
+<h3>CSS</h3>
+<p>You can choose different css files for me to use to render your html. You can even customize or add your own custom css files.</p>
+<h3>Syntax Highlighting</h3>
+<p>You have already seen how I can syntax highlight your fenced code blocks. See the <a href="#fenced-code-block">Fenced Code Block</a> section if you haven’t! You can also choose different themes for syntax highlighting.</p>
+<h3>TeX-like Math Syntax</h3>
+<p>I can also render TeX-like math syntaxes, if you allow me to.<sup id="fnref:math"><a class="footnote-ref" href="#fn:math" rel="footnote">5</a></sup> I can do inline math like this: \( 1 + 1 \) or this (in MathML): <math><mn>1</mn><mo>+</mo><mn>1</mn></math>, and block math:</p>
+<p>\[
+    A^T_S = B
+\]</p>
+<p>or (in MathML)</p>
+<math display="block">
+    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup>
+    <mo>=</mo>
+    <mi>B</mi>
+</math>
+
+<h3>Task List Syntax</h3>
+<ol>
+<li>[x] I can render checkbox list syntax<ul>
+<li>[x] I support nesting</li>
+<li>[x] I support ordered <em>and</em> unordered lists</li>
+</ul>
+</li>
+<li>[ ] I don't support clicking checkboxes directly in the html window</li>
+</ol>
+<h3>Jekyll front-matter</h3>
+<p>If you like, I can display Jekyll front-matter in a nice table. Just make sure you put the front-matter at the very beginning of the file, and fence it with <code>---</code>. For example:</p>
+<div class="highlight"><pre><span></span>---
+title: &quot;Macdown is my friend&quot;
+date: 2014-06-06 20:00:00
+---
+</pre></div>
+
+
+<h3>Render newline literally</h3>
+<p>Normally I require you to put two spaces and a newline (aka return) at the end of a line in order to create a line break. If you like, I can render a newline any time you end a line with a newline. However, if you enable this, markdown that looks lovely when I render it might look pretty funky when you let some <em>other</em> program render it.</p>
+<h2><a name="general-pane"></a>The General Preferences Pane</h2>
+<p>This is where I keep preferences related to application behavior.<br>
+<img alt="General preferences pane" src="http://d.pr/i/rvwu+"></p>
+<p>The General Preferences Pane allows you to tell me how you want me to behave. For example, do you want me to make sure there is a document open when I launch? You can also tell me if I should constantly update the preview window as you type, or wait for you to hit <code>command-R</code> instead. Maybe you prefer your editor window on the right? Or to see the word-count as you type. This is also the place to tell me if you are interested in pre-releases of me, or just want to stick to better-tested official releases.  </p>
+<h2><a name="editor-pane"></a>The Editor Preference Pane</h2>
+<p>This is where I keep preferences related to the behavior and styling of the editing window.<br>
+<img alt="Editor preferences pane" src="http://d.pr/i/6OL5+"></p>
+<h3>Styling</h3>
+<p>My editor provides syntax highlighting. You can edit the base font and the coloring/sizing theme. I provided some default themes (courtesy of <a href="http://mouapp.com">Mou</a>’s creator, Chen Luo) if you don’t know where to start.</p>
+<p>You can also edit, or even add new themes if you want to! Just click the <strong><em>Reveal</em></strong> button, and start moving things around. Remember to use the correct file extension (<code>.styles</code>), though. I’m picky about that.</p>
+<p>I offer auto-completion and other functions to ease your editing experience. If you don’t like it, however, you can turn them off.</p>
+<h2>Hack On</h2>
+<p>That’s about it. Thanks for listening. I’ll be quiet from now on (unless there’s an update about the app—I’ll remind you for that!).</p>
+<p>Happy writing!</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:4">
+<p>You don't have to use a number. Arbitrary things like <code>[^footy note4]</code> and <code>[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:emphasize">
+<p>If <strong>Underlines</strong> is turned on, <code>_this notation_</code> will render as underlined instead of emphasized&#160;<a class="footnote-backref" href="#fnref:emphasize" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:under">
+<p>If <strong>Underline</strong> is disabled <code>_this_</code> will be rendered as <em>emphasized</em> instead of being underlined.&#160;<a class="footnote-backref" href="#fnref:under" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:quote">
+<p><strong>Quote</strong> replaces literal <code>"</code> characters with html <code>&lt;q&gt;</code> tags. <strong>Quote</strong> and <strong>Smartypants</strong> are syntactically incompatible. If both are enabled, <strong>Quote</strong> takes precedence. Note that <strong>Quote</strong> is different from <em>blockquote</em>, which is part of standard Markdown.&#160;<a class="footnote-backref" href="#fnref:quote" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:math">
+<p>Internet connection required.&#160;<a class="footnote-backref" href="#fnref:math" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/python.html">Python</a>
+      <a href="/tag/pelican.html">Pelican</a>
+      <a href="/tag/static-website.html">Static Website</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Sarang Jaiswal ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
