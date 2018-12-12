@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Sarang Jaiswal - Sarang Jaiswal</title><link>http://www.sarangjaiswal.com/</link><description>Automation Architect</description><lastBuildDate>Tue, 11 Dec 2018 00:00:00 -0600</lastBuildDate><item><title>Pelican - Static Site Generator (Part 2)</title><link>http://www.sarangjaiswal.com/pelican-static-site-generator-part-2.html</link><description>&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;Part 2&lt;/strong&gt; article on &lt;code&gt;Pelican - Static Site Generator&lt;/code&gt;. In this article I will be covering following topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Pelican Site from scratch&lt;/li&gt;
+&lt;li&gt;Host the site on &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt; with yourname.github.io&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have covered the following in my &lt;strong&gt;Part 1&lt;/strong&gt; article on &lt;code&gt;Pelican - Static Site Generator&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sarang Jaiswal</dc:creator><pubDate>Tue, 11 Dec 2018 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:www.sarangjaiswal.com,2018-12-11:/pelican-static-site-generator-part-2.html</guid><category>Python</category><category>Pelican</category><category>GitHub</category></item><item><title>Pelican - Static Site Generator (Part 1)</title><link>http://www.sarangjaiswal.com/pelican-static-site-generator-part-1.html</link><description>&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
+&lt;p&gt;This is a quick tutorial on how to create a Static Website using &lt;a href="https://github.com/getpelican"&gt;Pelican&lt;/a&gt;.  &lt;/p&gt;
+&lt;h2&gt;What is a Pelican?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pelican&lt;/strong&gt; is a open source &lt;a href="https://en.wikipedia.org/wiki/Static_web_page"&gt;static website&lt;/a&gt; generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found &lt;a href="https://github.com/getpelican/pelican/blob/master/README.rst"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I'll introduce you to the basics …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sarang Jaiswal</dc:creator><pubDate>Sat, 08 Dec 2018 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:www.sarangjaiswal.com,2018-12-08:/pelican-static-site-generator-part-1.html</guid><category>Python</category><category>Pelican</category></item></channel></rss>
