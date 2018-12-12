@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="Sarang Jaiswal" />
+<meta name="description" content="Pelican - Static Site Generator (Part 1) This is a quick tutorial on how to create a Static Website using Pelican. What is a Pelican? Pelican is a open source static website generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found here …" />
+<meta name="keywords" content="Python, Pelican, Static Website">
+
+<meta property="og:site_name" content="Sarang Jaiswal"/>
+<meta property="og:title" content="Pelican - Static Site Generator (Part 1)"/>
+<meta property="og:description" content="Pelican - Static Site Generator (Part 1) This is a quick tutorial on how to create a Static Website using Pelican. What is a Pelican? Pelican is a open source static website generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found here …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/pelican-static-site-generator-part-1.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-12-07 00:00:00-06:00"/>
+<meta property="article:modified_time" content="2018-12-08 00:00:00-06:00"/>
+<meta property="article:author" content="/author/sarang-jaiswal.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Static Website"/>
+<meta property="og:image" content="">
+
+  <title>Sarang Jaiswal &ndash; Pelican - Static Site Generator (Part 1)</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://sarangjaiswal.com" target="_blank">Sarang Jaiswal</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li><a class="sc-LinkedIn" href="https://www.linkedin.com/in/sarangjaiswal" target="_blank">
+            <i class="fab fa-LinkedIn">
+            </i>
+          </a></li>
+          <li><a class="sc-Instagram" href="https://www.instagram.com/_sarang82/" target="_blank">
+            <i class="fab fa-Instagram">
+            </i>
+          </a></li>
+          <li><a class="sc-Twitter" href="https://twitter.com/_sarang82" target="_blank">
+            <i class="fab fa-Twitter">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="pelican-static-site-generator-part-1">Pelican - Static Site Generator (Part 1)</h1>
+    <p>
+          Posted on Fri 07 December 2018 in <a href="/category/python.html">Python</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Pelican - Static Site Generator (Part 1)</h1>
+<p><img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;v=4"></p>
+<p>This is a quick tutorial on how to create a Static Website using <a href="https://github.com/getpelican">Pelican</a>.  </p>
+<h2>What is a Pelican?</h2>
+<p><strong>Pelican</strong> is a open source <a href="https://en.wikipedia.org/wiki/Static_web_page">static website</a> generator that supports Markdown or restructured Text. Its based on Python. More details on Pelican can be found <a href="https://github.com/getpelican/pelican/blob/master/README.rst">here</a></p>
+<p>I'll introduce you to the basics of Pelicann. If you already know Pelican, and want to jump straight to learning about the fancier things, I suggest you skip this blog post and look for other articles on Pelican on my Blog. </p>
+<p>Also, I will be demonstating on MacOS, but the steps are more or less same for other popular platforms like Windows and Linux.</p>
+<p>Let's jump right in.</p>
+<h2>Installation</h2>
+<p>Before we get started, lets install <a href="https://pypi.org/project/pelican/">Pelican</a>.</p>
+<div class="highlight"><pre><span></span>SarangMac:~ sarangjaiswal$ pip install pelican
+Collecting pelican
+  Using cached https://files.pythonhosted.org/packages/a4/80/0a474a4aa30fab1666f63c2118d89bcbc05dc3180d791ab90d5e90b7f2e0/pelican-4.0.1-py2.py3-none-any.whl
+Requirement already satisfied: unidecode in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.0.23)
+Requirement already satisfied: blinker in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.4)
+Requirement already satisfied: docutils in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (0.14)
+Requirement already satisfied: pytz&gt;=0a in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2018.7)
+Requirement already satisfied: python-dateutil in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.7.5)
+Requirement already satisfied: six&gt;=1.4 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.11.0)
+Requirement already satisfied: feedgenerator&gt;=1.9 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (1.9)
+Requirement already satisfied: pygments in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.3.0)
+Requirement already satisfied: jinja2&gt;=2.7 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from pelican) (2.10)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from jinja2&gt;=2.7-&gt;pelican) (1.1.0)
+Installing collected packages: pelican
+Successfully installed pelican-4.0.1
+</pre></div>
+
+
+<p>I would reommend you to install <a href="https://pypi.org/project/Markdown/">Markdown</a> as well. You will be using this to generate Articles on your website/blog.</p>
+<div class="highlight"><pre><span></span>SarangMac:~ sarangjaiswal$ pip install markdown
+Collecting markdown
+  Using cached https://files.pythonhosted.org/packages/7a/6b/5600647404ba15545ec37d2f7f58844d690baf2f81f3a60b862e48f29287/Markdown-3.0.1-py2.py3-none-any.whl
+Installing collected packages: markdown
+Successfully installed markdown-3.0.1
+</pre></div>
+
+
+<h2>Quick Start</h2>
+<h3>Create a blank project</h3>
+<p>Create a folder where and name it appropriately for your site and switch to that directory. User <code>pelican-quickstart</code> to create project skeleton. This command will help you create a new Pelican-based website.</p>
+<p>It will ask you questions on how you would like to configure your website. Once you have answered these questions it will create the project skeleton accordingly.</p>
+<p>To keep it simple, I will be answering No to most of the questions. We will looks at more advanced examples later.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> 
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">v4</span><span class="o">.</span><span class="mf">0.1</span><span class="o">.</span>
+
+<span class="n">This</span> <span class="n">script</span> <span class="n">will</span> <span class="n">help</span> <span class="n">you</span> <span class="n">create</span> <span class="n">a</span> <span class="k">new</span> <span class="n">Pelican</span><span class="o">-</span><span class="n">based</span> <span class="n">website</span><span class="o">.</span>
+
+<span class="n">Please</span> <span class="n">answer</span> <span class="n">the</span> <span class="n">following</span> <span class="n">questions</span> <span class="n">so</span> <span class="k">this</span> <span class="n">script</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">files</span>
+<span class="n">needed</span> <span class="n">by</span> <span class="n">Pelican</span><span class="o">.</span>
+
+
+<span class="o">&gt;</span> <span class="n">Where</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="k">new</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="o">[.]</span> <span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">SimplePelicanWebSite</span>
+<span class="o">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">Sarang</span> <span class="n">Jaiswal</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="k">default</span> <span class="n">language</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="o">[</span><span class="n">en</span><span class="o">]</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="o">?</span> <span class="n">e</span><span class="o">.</span><span class="na">g</span><span class="o">.,</span> <span class="n">https</span><span class="o">://</span><span class="n">example</span><span class="o">.</span><span class="na">com</span>   <span class="o">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="o">)</span> <span class="n">n</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">article</span> <span class="n">pagination</span><span class="o">?</span> <span class="o">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="o">)</span> <span class="n">n</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">time</span> <span class="n">zone</span><span class="o">?</span> <span class="o">[</span><span class="n">Europe</span><span class="sr">/Paris] US/</span><span class="n">Central</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">tasks</span><span class="o">.</span><span class="na">py</span><span class="sr">/Makefile to automate generation and publishing? (Y/</span><span class="n">n</span><span class="o">)</span> <span class="n">n</span>
+<span class="n">Done</span><span class="o">.</span> <span class="n">Your</span> <span class="k">new</span> <span class="n">project</span> <span class="k">is</span> <span class="n">available</span> <span class="n">at</span> <span class="sr">/Users/sarangjaiswal/Documents/Workspace/</span><span class="n">Examples</span>
+</pre></div>
+
+
+<p>Following files were created in your project folder.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+<span class="n">total</span> <span class="mi">16</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">64</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">12</span><span class="o">:</span><span class="mi">54</span> <span class="n">content</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">64</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">12</span><span class="o">:</span><span class="mi">54</span> <span class="n">output</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">873</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">12</span><span class="o">:</span><span class="mi">54</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">589</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">12</span><span class="o">:</span><span class="mi">54</span> <span class="n">publishconf</span><span class="o">.</span><span class="na">py</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span>
+<span class="o">.</span>
+<span class="err">├──</span> <span class="n">content</span>
+<span class="err">├──</span> <span class="n">output</span>
+<span class="err">├──</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span>
+<span class="err">└──</span> <span class="n">publishconf</span><span class="o">.</span><span class="na">py</span>
+
+<span class="mi">2</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">2</span> <span class="n">files</span>
+</pre></div>
+
+
+<p>All the article or blog post written in either markdown or restructured text goes in <code>content</code> folder. The actual html for static website will be generated in <code>output</code> folder.</p>
+<h3>Create an article</h3>
+<p>Navigate to <code>content</code> folder and open your favorite text editor (in my case <a href="https://www.vim.org/">vim</a>) and add the following content and save the file.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">output</span> <span class="n">sarangjaiswal$</span> <span class="n">vi</span> <span class="n">Pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">md</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">Pelican</span> <span class="n">Is</span> <span class="n">Awesome</span>
+<span class="n">category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">tags</span><span class="o">:</span> <span class="n">Python</span><span class="o">,</span> <span class="n">Pelican</span><span class="o">,</span> <span class="n">Static</span> <span class="n">Website</span>
+<span class="n">date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">07</span>
+<span class="n">modified</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">07</span>
+
+<span class="err">#</span> <span class="n">Pelican</span> <span class="k">is</span> <span class="n">Awesome</span><span class="o">!</span>
+<span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="o">,</span> <span class="n">et</span> <span class="n">lobortis</span> <span class="n">ullamcorper</span> <span class="n">vix</span><span class="o">,</span> <span class="n">an</span> <span class="n">ridens</span> <span class="n">accusam</span> <span class="n">argumentum</span> <span class="n">eam</span><span class="o">.</span> <span class="n">Porro</span> <span class="n">mollis</span> <span class="n">invenire</span> <span class="n">ne</span> <span class="n">nam</span><span class="o">,</span> <span class="n">tractatos</span> <span class="n">petentium</span> <span class="n">reprimique</span> <span class="n">cu</span> <span class="n">quo</span><span class="o">.</span> <span class="n">Aperiam</span> <span class="n">facilis</span> <span class="n">sea</span> <span class="n">et</span><span class="o">,</span> <span class="n">sadipscing</span> <span class="n">ullamcorper</span> <span class="n">an</span> <span class="n">duo</span><span class="o">.</span> <span class="n">No</span> <span class="n">duis</span> <span class="n">ferri</span> <span class="n">autem</span> <span class="n">qui</span><span class="o">,</span> <span class="n">est</span> <span class="n">quot</span> <span class="n">discere</span> <span class="n">corrumpit</span> <span class="n">cu</span><span class="o">,</span> <span class="n">mel</span> <span class="n">ea</span> <span class="n">veri</span> <span class="n">eligendi</span> <span class="n">iudicabit</span><span class="o">.</span> <span class="n">Sit</span> <span class="n">ne</span> <span class="n">homero</span> <span class="n">dolorum</span><span class="o">.</span>
+<span class="n">Nec</span> <span class="n">ut</span> <span class="n">porro</span> <span class="n">admodum</span> <span class="n">contentiones</span><span class="o">,</span> <span class="n">ex</span> <span class="n">propriae</span> <span class="n">scriptorem</span> <span class="n">vituperatoribus</span> <span class="n">mea</span><span class="o">,</span> <span class="n">sit</span> <span class="n">et</span> <span class="n">duis</span> <span class="n">deterruisset</span><span class="o">.</span> <span class="n">Eu</span> <span class="n">velit</span> <span class="n">elitr</span> <span class="n">quo</span><span class="o">,</span> <span class="n">ne</span> <span class="n">pertinax</span> <span class="n">quaerendum</span> <span class="n">eam</span><span class="o">,</span> <span class="k">in</span> <span class="n">nam</span> <span class="n">unum</span> <span class="n">admodum</span><span class="o">.</span> <span class="n">Novum</span> <span class="n">fabulas</span> <span class="n">nonumes</span> <span class="n">quo</span> <span class="n">ne</span><span class="o">.</span> <span class="n">Duo</span> <span class="n">id</span> <span class="n">vero</span> <span class="n">porro</span> <span class="n">dicant</span><span class="o">,</span> <span class="n">te</span> <span class="n">mel</span> <span class="n">solet</span> <span class="n">efficiantur</span><span class="o">.</span>
+<span class="n">Nonumes</span> <span class="n">fastidii</span> <span class="n">propriae</span> <span class="n">eu</span> <span class="n">qui</span><span class="o">.</span> <span class="n">Eam</span> <span class="n">doctus</span> <span class="n">dolorum</span> <span class="n">ea</span><span class="o">.</span> <span class="n">Te</span> <span class="n">per</span> <span class="n">audire</span> <span class="n">verterem</span><span class="o">,</span> <span class="n">cu</span> <span class="n">eam</span> <span class="n">commodo</span> <span class="n">accusamus</span> <span class="n">expetendis</span><span class="o">,</span> <span class="n">mea</span> <span class="n">cu</span> <span class="n">nibh</span> <span class="n">adipiscing</span><span class="o">.</span> <span class="n">Te</span> <span class="n">est</span> <span class="n">aperiam</span> <span class="n">volumus</span> <span class="n">definitionem</span><span class="o">,</span> <span class="n">an</span> <span class="n">sea</span> <span class="n">nostro</span> <span class="n">indoctum</span> <span class="n">repudiare</span><span class="o">.</span>
+<span class="n">No</span> <span class="n">vel</span> <span class="n">amet</span> <span class="n">meliore</span> <span class="n">pericula</span><span class="o">,</span> <span class="n">summo</span> <span class="n">malorum</span> <span class="n">ex</span> <span class="n">eos</span><span class="o">.</span> <span class="n">Ad</span> <span class="n">ius</span> <span class="n">unum</span> <span class="n">labore</span> <span class="n">voluptua</span><span class="o">,</span> <span class="n">ne</span> <span class="n">eius</span> <span class="n">reque</span> <span class="n">conclusionemque</span> <span class="n">ius</span><span class="o">.</span> <span class="n">Ei</span> <span class="n">his</span> <span class="n">sale</span> <span class="n">veniam</span> <span class="n">inimicus</span><span class="o">.</span> <span class="n">Insolens</span> <span class="n">pertinacia</span> <span class="n">ne</span> <span class="n">has</span><span class="o">,</span> <span class="n">ei</span> <span class="n">mel</span> <span class="n">deleniti</span> <span class="n">erroribus</span> <span class="n">reformidans</span><span class="o">,</span> <span class="n">ne</span> <span class="n">debet</span> <span class="n">eirmod</span> <span class="n">vocibus</span> <span class="n">est</span><span class="o">.</span>
+<span class="n">Per</span> <span class="n">causae</span> <span class="n">omittam</span> <span class="n">omittantur</span> <span class="k">in</span><span class="o">,</span> <span class="n">pri</span> <span class="n">cu</span> <span class="n">cetero</span> <span class="n">facilis</span> <span class="n">honestatis</span><span class="o">.</span> <span class="n">Vix</span> <span class="n">dicat</span> <span class="n">equidem</span> <span class="n">ex</span><span class="o">,</span> <span class="n">ne</span> <span class="n">duo</span> <span class="n">suas</span> <span class="n">offendit</span> <span class="n">referrentur</span><span class="o">.</span> <span class="n">Admodum</span> <span class="n">percipit</span> <span class="n">accusamus</span> <span class="n">cu</span> <span class="n">mel</span><span class="o">,</span> <span class="n">ei</span> <span class="n">sit</span> <span class="n">nemore</span> <span class="n">labitur</span> <span class="n">lucilius</span><span class="o">,</span> <span class="n">ius</span> <span class="n">no</span> <span class="n">eruditi</span> <span class="n">indoctum</span><span class="o">.</span> <span class="n">Choro</span> <span class="n">iriure</span> <span class="n">cotidieque</span> <span class="n">cum</span> <span class="n">no</span><span class="o">,</span> <span class="n">ius</span> <span class="n">ei</span> <span class="n">exerci</span> <span class="n">rationibus</span><span class="o">.</span> <span class="n">Vim</span> <span class="n">minimum</span> <span class="n">sensibus</span> <span class="n">eu</span><span class="o">.</span> <span class="n">Sed</span> <span class="n">omnium</span> <span class="n">gubergren</span> <span class="n">assentior</span> <span class="n">ei</span><span class="o">,</span> <span class="n">melius</span> <span class="n">intellegam</span> <span class="n">id</span> <span class="n">usu</span><span class="o">,</span> <span class="n">etiam</span> <span class="n">albucius</span> <span class="n">te</span> <span class="n">his</span><span class="o">.</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">output</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+<span class="n">total</span> <span class="mi">8</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">1566</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">13</span><span class="o">:</span><span class="mi">23</span> <span class="n">Pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">md</span>
+</pre></div>
+
+
+<h3>Generate site</h3>
+<p>Navigate back to your site directory and run <code>pelican</code> to generate your website.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span> <span class="n">content</span><span class="sr">/ -o output/</span>
+<span class="n">Done</span><span class="o">:</span> <span class="n">Processed</span> <span class="mi">1</span> <span class="n">article</span><span class="o">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="o">,</span> <span class="mi">0</span> <span class="n">pages</span><span class="o">,</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="n">and</span> <span class="mi">0</span> <span class="n">draft</span> <span class="n">pages</span> <span class="k">in</span> <span class="mf">0.12</span> <span class="n">seconds</span><span class="o">.</span>
+</pre></div>
+
+
+<p>See below for details on arguments of <code>pelican</code> command</p>
+<div class="highlight"><pre><span></span>  -o OUTPUT, --output OUTPUT
+                        Where to output the generated files. If not specified,
+                        a directory will be created, named &quot;output&quot; in the
+                        current path. (default: None)
+  -s SETTINGS, --settings SETTINGS
+                        The settings of the application, this is automatically
+                        set to pelicanconf.py if a file exists with this name.
+                        (default: None)
+</pre></div>
+
+
+<p>Above command will convert your Markdown (.md) file into html. All the converted files will be placed in <code>output</code> directory.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span> <span class="n">output</span><span class="o">/</span>
+<span class="n">total</span> <span class="mi">64</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">4486</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">4378</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">index</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2263</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">tags</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2094</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">categories</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2151</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">authors</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2157</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">archives</span><span class="o">.</span><span class="na">html</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">5</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">160</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">tag</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">96</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">category</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">96</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">author</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">5</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">160</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">17</span><span class="o">:</span><span class="mi">23</span> <span class="n">theme</span>
+<span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span> <span class="n">output</span><span class="o">/</span>
+<span class="n">output</span><span class="o">/</span>
+<span class="err">├──</span> <span class="n">archives</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">author</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">sarang</span><span class="o">-</span><span class="n">jaiswal</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">authors</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">categories</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">category</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">python</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">index</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">tag</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">pelican</span><span class="o">.</span><span class="na">html</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">python</span><span class="o">.</span><span class="na">html</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="kd">static</span><span class="o">-</span><span class="n">website</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">tags</span><span class="o">.</span><span class="na">html</span>
+<span class="err">└──</span> <span class="n">theme</span>
+    <span class="err">├──</span> <span class="n">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">fonts</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">main</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">pygment</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">reset</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">typogrify</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="n">wide</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">├──</span> <span class="n">fonts</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">eot</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">svg</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">ttf</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">woff</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">woff2</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="n">font</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">└──</span> <span class="n">images</span>
+        <span class="err">└──</span> <span class="n">icons</span>
+            <span class="err">├──</span> <span class="n">aboutme</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">bitbucket</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">delicious</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">facebook</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">github</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">gitorious</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">gittip</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">google</span><span class="o">-</span><span class="n">groups</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">google</span><span class="o">-</span><span class="n">plus</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">hackernews</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">lastfm</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">linkedin</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">reddit</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">rss</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">slideshare</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">speakerdeck</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">stackoverflow</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">twitter</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">vimeo</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">└──</span> <span class="n">youtube</span><span class="o">.</span><span class="na">png</span>
+
+<span class="mi">8</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">43</span> <span class="n">files</span>
+</pre></div>
+
+
+<h3>Preview site</h3>
+<p>Navigate back to the parent folder of the site and run </p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span> <span class="o">-</span><span class="n">l</span> <span class="n">content</span><span class="sr">/ -o output/</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8082</span>
+</pre></div>
+
+
+<p>See below for details on arguments of <code>pelican</code> command</p>
+<div class="highlight"><pre><span></span>  -t THEME, --theme-path THEME
+                        Path where to find the theme templates. If not
+                        specified, it will use the default one included with
+                        pelican. (default: None)
+  -o OUTPUT, --output OUTPUT
+                        Where to output the generated files. If not specified,
+                        a directory will be created, named &quot;output&quot; in the
+                        current path. (default: None)
+  -s SETTINGS, --settings SETTINGS
+                        The settings of the application, this is automatically
+                        set to pelicanconf.py if a file exists with this name.
+                        (default: None)
+
+  -p PORT, --port PORT  Port to serve HTTP files at. (default: 8000) (default:
+                        None)
+</pre></div>
+
+
+<p>Open the browser and give <code>localhost:8082</code> to see your website.</p>
+<div class="highlight"><pre><span></span>127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET / HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/css/main.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/css/reset.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/css/pygment.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/css/typogrify.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/css/fonts.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [08/Dec/2018 17:54:47] &quot;GET /theme/fonts/Yanone_Kaffeesatz_400.woff HTTP/1.1&quot; 200 -
+WARNING: Unable to find `/favicon.ico` or variations:
+  | /favicon.ico.html
+  | /favicon.ico/index.html
+  | /favicon.ico/
+  | /favicon.ico
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/python.html">Python</a>
+      <a href="/tag/pelican.html">Pelican</a>
+      <a href="/tag/static-website.html">Static Website</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Sarang Jaiswal ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="Sarang Jaiswal" />
+<meta name="description" content="Pelican - Static Site Generator (Part 2) This is Part 2 article on Pelican - Static Site Generator. In this article I will be covering following topics: Create a Pelican Site from scratch Host the site on GitHub with yourname.github.io I have covered the following in my Part 1 article …" />
+<meta name="keywords" content="Python, Pelican, Static Website">
+
+<meta property="og:site_name" content="Sarang Jaiswal"/>
+<meta property="og:title" content="Pelican - Static Site Generator (Part 2)"/>
+<meta property="og:description" content="Pelican - Static Site Generator (Part 2) This is Part 2 article on Pelican - Static Site Generator. In this article I will be covering following topics: Create a Pelican Site from scratch Host the site on GitHub with yourname.github.io I have covered the following in my Part 1 article …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/pelican-static-site-generator-part-2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-12-11 00:00:00-06:00"/>
+<meta property="article:modified_time" content="2018-12-11 00:00:00-06:00"/>
+<meta property="article:author" content="/author/sarang-jaiswal.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Static Website"/>
+<meta property="og:image" content="">
+
+  <title>Sarang Jaiswal &ndash; Pelican - Static Site Generator (Part 2)</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://sarangjaiswal.com" target="_blank">Sarang Jaiswal</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li><a class="sc-LinkedIn" href="https://www.linkedin.com/in/sarangjaiswal" target="_blank">
+            <i class="fab fa-LinkedIn">
+            </i>
+          </a></li>
+          <li><a class="sc-Instagram" href="https://www.instagram.com/_sarang82/" target="_blank">
+            <i class="fab fa-Instagram">
+            </i>
+          </a></li>
+          <li><a class="sc-Twitter" href="https://twitter.com/_sarang82" target="_blank">
+            <i class="fab fa-Twitter">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="pelican-static-site-generator-part-2">Pelican - Static Site Generator (Part 2)</h1>
+    <p>
+          Posted on Tue 11 December 2018 in <a href="/category/python.html">Python</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Pelican - Static Site Generator (Part 2)</h1>
+<p><img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;v=4"></p>
+<p>This is <strong>Part 2</strong> article on <code>Pelican - Static Site Generator</code>. In this article I will be covering following topics:</p>
+<ul>
+<li>Create a Pelican Site from scratch</li>
+<li>Host the site on <a href="https://github.com/">GitHub</a> with yourname.github.io</li>
+</ul>
+<p>I have covered the following in my <strong>Part 1</strong> article on <code>Pelican - Static Site Generator</code></p>
+<ul>
+<li>What is Pelican?</li>
+<li>Installation</li>
+<li>Quick Start<ul>
+<li>Create a blank project</li>
+<li>Create an Article</li>
+<li>Generate Site</li>
+<li>Preview Site</li>
+</ul>
+</li>
+</ul>
+<p>If you are new to Pelican, I would highly recommend you to read that article first before begining with this one. You can find Part 1 of <code>Pelican - Static Site Generator</code> <a href="https://www.sarangjaiswal.com/pelican-static-website-generator.html">here</a></p>
+<h2>Quick Start with GitHub Enabled</h2>
+<h3>Clone a New Repository from GitHub</h3>
+<p>Create a new repository in github and clone the repository. We will be using that repository folder to create the Static Website.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Examples</span> <span class="n">sarangjaiswal$</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">://</span><span class="n">github</span><span class="o">.</span><span class="na">com</span><span class="sr">/jaiswalsarang/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">git</span>
+<span class="n">Cloning</span> <span class="n">into</span> <span class="s1">&#39;jaiswalsarang.github.io&#39;</span><span class="o">...</span>
+<span class="n">remote</span><span class="o">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">4</span><span class="o">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="o">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="o">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span><span class="o">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="o">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="o">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span><span class="o">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="o">:</span> <span class="n">Total</span> <span class="mi">4</span> <span class="o">(</span><span class="n">delta</span> <span class="mi">0</span><span class="o">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="o">(</span><span class="n">delta</span> <span class="mi">0</span><span class="o">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">Unpacking</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="o">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span><span class="o">),</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span>
+<span class="n">LICENSE</span>
+<span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span>
+<span class="o">.</span>
+<span class="err">└──</span> <span class="n">LICENSE</span>
+
+<span class="mi">0</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">1</span> <span class="n">file</span>
+</pre></div>
+
+
+<h3>Create a blank project</h3>
+<p>Switch to newly created directory. Use <code>pelican-quickstart</code> to create project skeleton. This command will help you create a new Pelican-based website.</p>
+<p>It will ask you questions on how you would like to configure your website. Once you have answered these questions it will create the project skeleton accordingly.</p>
+<p>To keep it simple, I will be answering No to most of the questions. We will looks at more advanced examples later.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> 
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">v4</span><span class="o">.</span><span class="mf">0.1</span><span class="o">.</span>
+
+<span class="n">This</span> <span class="n">script</span> <span class="n">will</span> <span class="n">help</span> <span class="n">you</span> <span class="n">create</span> <span class="n">a</span> <span class="k">new</span> <span class="n">Pelican</span><span class="o">-</span><span class="n">based</span> <span class="n">website</span><span class="o">.</span>
+
+<span class="n">Please</span> <span class="n">answer</span> <span class="n">the</span> <span class="n">following</span> <span class="n">questions</span> <span class="n">so</span> <span class="k">this</span> <span class="n">script</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">files</span>
+<span class="n">needed</span> <span class="n">by</span> <span class="n">Pelican</span><span class="o">.</span>
+
+
+<span class="o">&gt;</span> <span class="n">Where</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="k">new</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="o">[.]</span> <span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">SimpleStaticWebSiteHostedOnGitHub</span>
+<span class="o">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">Sarang</span> <span class="n">Jaiswal</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="k">default</span> <span class="n">language</span> <span class="n">of</span> <span class="k">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="o">[</span><span class="n">en</span><span class="o">]</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="o">?</span> <span class="n">e</span><span class="o">.</span><span class="na">g</span><span class="o">.,</span> <span class="n">https</span><span class="o">://</span><span class="n">example</span><span class="o">.</span><span class="na">com</span>   <span class="o">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="o">?</span> <span class="o">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="o">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="o">)</span> <span class="n">http</span><span class="o">://</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">article</span> <span class="n">pagination</span><span class="o">?</span> <span class="o">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">How</span> <span class="n">many</span> <span class="n">articles</span> <span class="n">per</span> <span class="n">page</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span><span class="o">?</span> <span class="o">[</span><span class="mi">10</span><span class="o">]</span> 
+<span class="o">&gt;</span> <span class="n">What</span> <span class="k">is</span> <span class="n">your</span> <span class="n">time</span> <span class="n">zone</span><span class="o">?</span> <span class="o">[</span><span class="n">Europe</span><span class="sr">/Paris] US/</span><span class="n">Central</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">tasks</span><span class="o">.</span><span class="na">py</span><span class="sr">/Makefile to automate generation and publishing? (Y/</span><span class="n">n</span><span class="o">)</span> <span class="n">Y</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">FTP</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">SSH</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Dropbox</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">S3</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Rackspace</span> <span class="n">Cloud</span> <span class="n">Files</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> 
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">GitHub</span> <span class="n">Pages</span><span class="o">?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> <span class="n">Y</span>
+<span class="o">&gt;</span> <span class="n">Is</span> <span class="k">this</span> <span class="n">your</span> <span class="n">personal</span> <span class="n">page</span> <span class="o">(</span><span class="n">username</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span><span class="o">)?</span> <span class="o">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="o">)</span> <span class="n">Y</span>
+<span class="n">Done</span><span class="o">.</span> <span class="n">Your</span> <span class="k">new</span> <span class="n">project</span> <span class="k">is</span> <span class="n">available</span> <span class="n">at</span> <span class="sr">/Users/sarangjaiswal/Documents/Workspace/Examples/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span>
+</pre></div>
+
+
+<p>Following files were created in your project folder.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+<span class="n">total</span> <span class="mi">40</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">1070</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">49</span> <span class="n">LICENSE</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">64</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">content</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">64</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">output</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">883</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">619</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">publishconf</span><span class="o">.</span><span class="na">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2107</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">tasks</span><span class="o">.</span><span class="na">py</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2923</span> <span class="n">Dec</span> <span class="mi">11</span> <span class="mi">20</span><span class="o">:</span><span class="mi">52</span> <span class="n">Makefile</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span>
+<span class="o">.</span>
+<span class="err">├──</span> <span class="n">LICENSE</span>
+<span class="err">├──</span> <span class="n">Makefile</span>
+<span class="err">├──</span> <span class="n">content</span>
+<span class="err">├──</span> <span class="n">output</span>
+<span class="err">├──</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span>
+<span class="err">├──</span> <span class="n">publishconf</span><span class="o">.</span><span class="na">py</span>
+<span class="err">└──</span> <span class="n">tasks</span><span class="o">.</span><span class="na">py</span>
+
+<span class="mi">2</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">5</span> <span class="n">files</span>
+</pre></div>
+
+
+<p>All the article or blog post written in either markdown or restructured text goes in <code>content</code> folder. The actual html for static website will be generated in <code>output</code> folder.</p>
+<h3>Create an article</h3>
+<p>Navigate to <code>content</code> folder and open your favorite text editor (in my case <a href="https://www.vim.org/">vim</a>) and add the following content and save the file.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">output</span> <span class="n">sarangjaiswal$</span> <span class="n">vi</span> <span class="n">Pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">md</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">Pelican</span> <span class="n">Is</span> <span class="n">Awesome</span>
+<span class="n">category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">tags</span><span class="o">:</span> <span class="n">Python</span><span class="o">,</span> <span class="n">Pelican</span><span class="o">,</span> <span class="n">Static</span> <span class="n">Website</span>
+<span class="n">date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">07</span>
+<span class="n">modified</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">07</span>
+
+<span class="err">#</span> <span class="n">Pelican</span> <span class="k">is</span> <span class="n">Awesome</span><span class="o">!</span>
+<span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="o">,</span> <span class="n">et</span> <span class="n">lobortis</span> <span class="n">ullamcorper</span> <span class="n">vix</span><span class="o">,</span> <span class="n">an</span> <span class="n">ridens</span> <span class="n">accusam</span> <span class="n">argumentum</span> <span class="n">eam</span><span class="o">.</span> <span class="n">Porro</span> <span class="n">mollis</span> <span class="n">invenire</span> <span class="n">ne</span> <span class="n">nam</span><span class="o">,</span> <span class="n">tractatos</span> <span class="n">petentium</span> <span class="n">reprimique</span> <span class="n">cu</span> <span class="n">quo</span><span class="o">.</span> <span class="n">Aperiam</span> <span class="n">facilis</span> <span class="n">sea</span> <span class="n">et</span><span class="o">,</span> <span class="n">sadipscing</span> <span class="n">ullamcorper</span> <span class="n">an</span> <span class="n">duo</span><span class="o">.</span> <span class="n">No</span> <span class="n">duis</span> <span class="n">ferri</span> <span class="n">autem</span> <span class="n">qui</span><span class="o">,</span> <span class="n">est</span> <span class="n">quot</span> <span class="n">discere</span> <span class="n">corrumpit</span> <span class="n">cu</span><span class="o">,</span> <span class="n">mel</span> <span class="n">ea</span> <span class="n">veri</span> <span class="n">eligendi</span> <span class="n">iudicabit</span><span class="o">.</span> <span class="n">Sit</span> <span class="n">ne</span> <span class="n">homero</span> <span class="n">dolorum</span><span class="o">.</span>
+<span class="n">Nec</span> <span class="n">ut</span> <span class="n">porro</span> <span class="n">admodum</span> <span class="n">contentiones</span><span class="o">,</span> <span class="n">ex</span> <span class="n">propriae</span> <span class="n">scriptorem</span> <span class="n">vituperatoribus</span> <span class="n">mea</span><span class="o">,</span> <span class="n">sit</span> <span class="n">et</span> <span class="n">duis</span> <span class="n">deterruisset</span><span class="o">.</span> <span class="n">Eu</span> <span class="n">velit</span> <span class="n">elitr</span> <span class="n">quo</span><span class="o">,</span> <span class="n">ne</span> <span class="n">pertinax</span> <span class="n">quaerendum</span> <span class="n">eam</span><span class="o">,</span> <span class="k">in</span> <span class="n">nam</span> <span class="n">unum</span> <span class="n">admodum</span><span class="o">.</span> <span class="n">Novum</span> <span class="n">fabulas</span> <span class="n">nonumes</span> <span class="n">quo</span> <span class="n">ne</span><span class="o">.</span> <span class="n">Duo</span> <span class="n">id</span> <span class="n">vero</span> <span class="n">porro</span> <span class="n">dicant</span><span class="o">,</span> <span class="n">te</span> <span class="n">mel</span> <span class="n">solet</span> <span class="n">efficiantur</span><span class="o">.</span>
+<span class="n">Nonumes</span> <span class="n">fastidii</span> <span class="n">propriae</span> <span class="n">eu</span> <span class="n">qui</span><span class="o">.</span> <span class="n">Eam</span> <span class="n">doctus</span> <span class="n">dolorum</span> <span class="n">ea</span><span class="o">.</span> <span class="n">Te</span> <span class="n">per</span> <span class="n">audire</span> <span class="n">verterem</span><span class="o">,</span> <span class="n">cu</span> <span class="n">eam</span> <span class="n">commodo</span> <span class="n">accusamus</span> <span class="n">expetendis</span><span class="o">,</span> <span class="n">mea</span> <span class="n">cu</span> <span class="n">nibh</span> <span class="n">adipiscing</span><span class="o">.</span> <span class="n">Te</span> <span class="n">est</span> <span class="n">aperiam</span> <span class="n">volumus</span> <span class="n">definitionem</span><span class="o">,</span> <span class="n">an</span> <span class="n">sea</span> <span class="n">nostro</span> <span class="n">indoctum</span> <span class="n">repudiare</span><span class="o">.</span>
+<span class="n">No</span> <span class="n">vel</span> <span class="n">amet</span> <span class="n">meliore</span> <span class="n">pericula</span><span class="o">,</span> <span class="n">summo</span> <span class="n">malorum</span> <span class="n">ex</span> <span class="n">eos</span><span class="o">.</span> <span class="n">Ad</span> <span class="n">ius</span> <span class="n">unum</span> <span class="n">labore</span> <span class="n">voluptua</span><span class="o">,</span> <span class="n">ne</span> <span class="n">eius</span> <span class="n">reque</span> <span class="n">conclusionemque</span> <span class="n">ius</span><span class="o">.</span> <span class="n">Ei</span> <span class="n">his</span> <span class="n">sale</span> <span class="n">veniam</span> <span class="n">inimicus</span><span class="o">.</span> <span class="n">Insolens</span> <span class="n">pertinacia</span> <span class="n">ne</span> <span class="n">has</span><span class="o">,</span> <span class="n">ei</span> <span class="n">mel</span> <span class="n">deleniti</span> <span class="n">erroribus</span> <span class="n">reformidans</span><span class="o">,</span> <span class="n">ne</span> <span class="n">debet</span> <span class="n">eirmod</span> <span class="n">vocibus</span> <span class="n">est</span><span class="o">.</span>
+<span class="n">Per</span> <span class="n">causae</span> <span class="n">omittam</span> <span class="n">omittantur</span> <span class="k">in</span><span class="o">,</span> <span class="n">pri</span> <span class="n">cu</span> <span class="n">cetero</span> <span class="n">facilis</span> <span class="n">honestatis</span><span class="o">.</span> <span class="n">Vix</span> <span class="n">dicat</span> <span class="n">equidem</span> <span class="n">ex</span><span class="o">,</span> <span class="n">ne</span> <span class="n">duo</span> <span class="n">suas</span> <span class="n">offendit</span> <span class="n">referrentur</span><span class="o">.</span> <span class="n">Admodum</span> <span class="n">percipit</span> <span class="n">accusamus</span> <span class="n">cu</span> <span class="n">mel</span><span class="o">,</span> <span class="n">ei</span> <span class="n">sit</span> <span class="n">nemore</span> <span class="n">labitur</span> <span class="n">lucilius</span><span class="o">,</span> <span class="n">ius</span> <span class="n">no</span> <span class="n">eruditi</span> <span class="n">indoctum</span><span class="o">.</span> <span class="n">Choro</span> <span class="n">iriure</span> <span class="n">cotidieque</span> <span class="n">cum</span> <span class="n">no</span><span class="o">,</span> <span class="n">ius</span> <span class="n">ei</span> <span class="n">exerci</span> <span class="n">rationibus</span><span class="o">.</span> <span class="n">Vim</span> <span class="n">minimum</span> <span class="n">sensibus</span> <span class="n">eu</span><span class="o">.</span> <span class="n">Sed</span> <span class="n">omnium</span> <span class="n">gubergren</span> <span class="n">assentior</span> <span class="n">ei</span><span class="o">,</span> <span class="n">melius</span> <span class="n">intellegam</span> <span class="n">id</span> <span class="n">usu</span><span class="o">,</span> <span class="n">etiam</span> <span class="n">albucius</span> <span class="n">te</span> <span class="n">his</span><span class="o">.</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">output</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+<span class="n">total</span> <span class="mi">8</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">1562</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">53</span> <span class="n">Pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">md</span>
+</pre></div>
+
+
+<h3>Generate site</h3>
+<p>Navigate back to your site directory and run <code>pelican</code> to generate your website.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span> <span class="n">content</span><span class="sr">/ -o output/</span>
+<span class="n">Done</span><span class="o">:</span> <span class="n">Processed</span> <span class="mi">1</span> <span class="n">article</span><span class="o">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="o">,</span> <span class="mi">0</span> <span class="n">pages</span><span class="o">,</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="n">and</span> <span class="mi">0</span> <span class="n">draft</span> <span class="n">pages</span> <span class="k">in</span> <span class="mf">0.15</span> <span class="n">seconds</span><span class="o">.</span>
+</pre></div>
+
+
+<p>See below for details on arguments of <code>pelican</code> command</p>
+<div class="highlight"><pre><span></span>  -o OUTPUT, --output OUTPUT
+                        Where to output the generated files. If not specified,
+                        a directory will be created, named &quot;output&quot; in the
+                        current path. (default: None)
+  -s SETTINGS, --settings SETTINGS
+                        The settings of the application, this is automatically
+                        set to pelicanconf.py if a file exists with this name.
+                        (default: None)
+</pre></div>
+
+
+<p>Above command will convert your Markdown (.md) file into html. All the converted files will be placed in <code>output</code> directory.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">SiteWithGitHub</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span> <span class="n">output</span><span class="o">/</span>
+<span class="n">total</span> <span class="mi">64</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">5</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">160</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">54</span> <span class="n">theme</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">4472</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">4378</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">index</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2305</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">tags</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2136</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">categories</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2193</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">authors</span><span class="o">.</span><span class="na">html</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">2199</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">archives</span><span class="o">.</span><span class="na">html</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">5</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>   <span class="mi">160</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">tag</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">96</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">category</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>    <span class="mi">96</span> <span class="n">Dec</span>  <span class="mi">9</span> <span class="mi">21</span><span class="o">:</span><span class="mi">55</span> <span class="n">author</span>
+<span class="n">SarangMac</span><span class="o">:</span><span class="n">SiteWithGitHub</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span> <span class="n">output</span><span class="o">/</span>
+<span class="n">output</span><span class="o">/</span>
+<span class="err">├──</span> <span class="n">archives</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">author</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">sarang</span><span class="o">-</span><span class="n">jaiswal</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">authors</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">categories</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">category</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">python</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">index</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">pelican</span><span class="o">-</span><span class="k">is</span><span class="o">-</span><span class="n">awesome</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">tag</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">pelican</span><span class="o">.</span><span class="na">html</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">python</span><span class="o">.</span><span class="na">html</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="kd">static</span><span class="o">-</span><span class="n">website</span><span class="o">.</span><span class="na">html</span>
+<span class="err">├──</span> <span class="n">tags</span><span class="o">.</span><span class="na">html</span>
+<span class="err">└──</span> <span class="n">theme</span>
+    <span class="err">├──</span> <span class="n">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">fonts</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">main</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">pygment</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">reset</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">typogrify</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="n">wide</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">├──</span> <span class="n">fonts</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">eot</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">svg</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">ttf</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">woff</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="n">Yanone_Kaffeesatz_400</span><span class="o">.</span><span class="na">woff2</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="n">font</span><span class="o">.</span><span class="na">css</span>
+    <span class="err">└──</span> <span class="n">images</span>
+        <span class="err">└──</span> <span class="n">icons</span>
+            <span class="err">├──</span> <span class="n">aboutme</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">bitbucket</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">delicious</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">facebook</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">github</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">gitorious</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">gittip</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">google</span><span class="o">-</span><span class="n">groups</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">google</span><span class="o">-</span><span class="n">plus</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">hackernews</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">lastfm</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">linkedin</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">reddit</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">rss</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">slideshare</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">speakerdeck</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">stackoverflow</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">twitter</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">├──</span> <span class="n">vimeo</span><span class="o">.</span><span class="na">png</span>
+            <span class="err">└──</span> <span class="n">youtube</span><span class="o">.</span><span class="na">png</span>
+
+<span class="mi">8</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">43</span> <span class="n">files</span>
+</pre></div>
+
+
+<h3>Preview site</h3>
+<p>Navigate back to the parent folder of the site and run </p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">pelican</span> <span class="o">-</span><span class="n">l</span> <span class="n">content</span><span class="sr">/ -o output/</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8085</span>
+</pre></div>
+
+
+<p>See below for details on arguments of <code>pelican</code> command</p>
+<div class="highlight"><pre><span></span>  -t THEME, --theme-path THEME
+                        Path where to find the theme templates. If not
+                        specified, it will use the default one included with
+                        pelican. (default: None)
+  -o OUTPUT, --output OUTPUT
+                        Where to output the generated files. If not specified,
+                        a directory will be created, named &quot;output&quot; in the
+                        current path. (default: None)
+  -s SETTINGS, --settings SETTINGS
+                        The settings of the application, this is automatically
+                        set to pelicanconf.py if a file exists with this name.
+                        (default: None)
+
+  -p PORT, --port PORT  Port to serve HTTP files at. (default: 8000) (default:
+                        None)
+</pre></div>
+
+
+<p>Open the browser and give <code>localhost:8085</code> to see your website.</p>
+<div class="highlight"><pre><span></span>127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET / HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/css/main.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/css/reset.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/css/pygment.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/css/typogrify.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/css/fonts.css HTTP/1.1&quot; 200 -
+127.0.0.1 - - [11/Dec/2018 21:01:12] &quot;GET /theme/fonts/Yanone_Kaffeesatz_400.woff HTTP/1.1&quot; 200 -
+</pre></div>
+
+
+<h3>Use Make file to build and push it to Github</h3>
+<p>Navigate back to the parent folder of the site and run <code>make</code> command. This will show you all the options which can be used.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">make</span>
+<span class="n">Makefile</span> <span class="k">for</span> <span class="n">a</span> <span class="n">pelican</span> <span class="n">Web</span> <span class="n">site</span>                                           
+
+<span class="n">Usage</span><span class="o">:</span>                                                                    
+   <span class="n">make</span> <span class="n">html</span>                           <span class="o">(</span><span class="n">re</span><span class="o">)</span><span class="n">generate</span> <span class="n">the</span> <span class="n">web</span> <span class="n">site</span>          
+   <span class="n">make</span> <span class="n">clean</span>                          <span class="n">remove</span> <span class="n">the</span> <span class="n">generated</span> <span class="n">files</span>         
+   <span class="n">make</span> <span class="n">regenerate</span>                     <span class="n">regenerate</span> <span class="n">files</span> <span class="n">upon</span> <span class="n">modification</span> 
+   <span class="n">make</span> <span class="n">publish</span>                        <span class="n">generate</span> <span class="n">using</span> <span class="n">production</span> <span class="n">settings</span> 
+   <span class="n">make</span> <span class="n">serve</span> <span class="o">[</span><span class="n">PORT</span><span class="o">=</span><span class="mi">8000</span><span class="o">]</span>              <span class="n">serve</span> <span class="n">site</span> <span class="n">at</span> <span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">8000</span>
+   <span class="n">make</span> <span class="n">serve</span><span class="o">-</span><span class="n">global</span> <span class="o">[</span><span class="n">SERVER</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">]</span>  <span class="n">serve</span> <span class="o">(</span><span class="k">as</span> <span class="n">root</span><span class="o">)</span> <span class="n">to</span> <span class="o">:</span><span class="mi">80</span>    
+   <span class="n">make</span> <span class="n">devserver</span> <span class="o">[</span><span class="n">PORT</span><span class="o">=</span><span class="mi">8000</span><span class="o">]</span>          <span class="n">serve</span> <span class="n">and</span> <span class="n">regenerate</span> <span class="n">together</span>      
+   <span class="n">make</span> <span class="n">ssh_upload</span>                     <span class="n">upload</span> <span class="n">the</span> <span class="n">web</span> <span class="n">site</span> <span class="n">via</span> <span class="n">SSH</span>        
+   <span class="n">make</span> <span class="n">rsync_upload</span>                   <span class="n">upload</span> <span class="n">the</span> <span class="n">web</span> <span class="n">site</span> <span class="n">via</span> <span class="n">rsync</span><span class="o">+</span><span class="n">ssh</span>  
+   <span class="n">make</span> <span class="n">github</span>                         <span class="n">upload</span> <span class="n">the</span> <span class="n">web</span> <span class="n">site</span> <span class="n">via</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>   
+
+<span class="n">Set</span> <span class="n">the</span> <span class="n">DEBUG</span> <span class="n">variable</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">debugging</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">g</span><span class="o">.</span> <span class="n">make</span> <span class="n">DEBUG</span><span class="o">=</span><span class="mi">1</span> <span class="n">html</span>   
+<span class="n">Set</span> <span class="n">the</span> <span class="n">RELATIVE</span> <span class="n">variable</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">relative</span> <span class="n">urls</span> 
+</pre></div>
+
+
+<p>Use <code>make html</code> to regenerate the static website. This is similar to  <code>pelican -s pelicanconf.py content/ -o output/</code> command which we used earlier.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span> <span class="n">sarangjaiswal$</span> <span class="n">make</span> <span class="n">html</span>
+<span class="n">pelican</span> <span class="sr">/Users/sarangjaiswal/Documents/Workspace/Examples/jaiswalsarang.github.io/content -o /Users/sarangjaiswal/Documents/Workspace/Examples/jaiswalsarang.github.io/output -s /Users/sarangjaiswal/Documents/Workspace/Examples/jaiswalsarang.github.io/</span><span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span> 
+<span class="n">Done</span><span class="o">:</span> <span class="n">Processed</span> <span class="mi">1</span> <span class="n">article</span><span class="o">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="o">,</span> <span class="mi">0</span> <span class="n">pages</span><span class="o">,</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="n">and</span> <span class="mi">0</span> <span class="n">draft</span> <span class="n">pages</span> <span class="k">in</span> <span class="mf">0.11</span> <span class="n">seconds</span><span class="o">.</span>
+</pre></div>
+
+
+<p>Use <code>make github</code> to push the files from <code>output</code> folder to github</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="p">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span> <span class="n">sarangjaiswal</span><span class="err">$</span> <span class="n">make</span> <span class="n">github</span>
+<span class="n">pelican</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">publishconf</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">Done</span><span class="p">:</span> <span class="n">Processed</span> <span class="mi">1</span> <span class="n">article</span><span class="p">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="p">,</span> <span class="mi">0</span> <span class="n">pages</span><span class="p">,</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">draft</span> <span class="n">pages</span> <span class="ow">in</span> <span class="mf">0.13</span> <span class="n">seconds</span><span class="o">.</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Generate Pelican site&quot;</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">output</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">Username</span> <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span><span class="p">:</span> <span class="n">jaiswalsarang</span>
+<span class="n">Password</span> <span class="k">for</span> <span class="s1">&#39;https://jaiswalsarang@github.com&#39;</span><span class="p">:</span> 
+<span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">12</span> <span class="n">threads</span><span class="o">.</span>
+<span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">53</span><span class="o">/</span><span class="mi">53</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Writing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">56</span><span class="o">/</span><span class="mi">56</span><span class="p">),</span> <span class="mf">132.07</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">11.01</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Total</span> <span class="mi">56</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">13</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">13</span><span class="o">/</span><span class="mi">13</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">To</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
+   <span class="mi">92</span><span class="n">a5245</span><span class="o">..</span><span class="mi">78342</span><span class="n">fd</span>  <span class="n">master</span> <span class="o">-&gt;</span> <span class="n">master</span>
+</pre></div>
+
+
+<p>Navigate to <code>yourname.github.io</code> to see the site site. </p>
+<p>If you came across the below <code>The requested URL returned error: 403</code> error then refer the Stack Overflow <a href="https://stackoverflow.com/questions/39422521/how-can-i-change-the-user-on-git-bash">here</a> to resolve it.</p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="p">:</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span> <span class="n">sarangjaiswal</span><span class="err">$</span> <span class="n">make</span> <span class="n">github</span>
+<span class="n">pelican</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">publishconf</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">Done</span><span class="p">:</span> <span class="n">Processed</span> <span class="mi">1</span> <span class="n">article</span><span class="p">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="p">,</span> <span class="mi">0</span> <span class="n">pages</span><span class="p">,</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">draft</span> <span class="n">pages</span> <span class="ow">in</span> <span class="mf">0.12</span> <span class="n">seconds</span><span class="o">.</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Generate Pelican site&quot;</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">sarangjaiswal</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Workspace</span><span class="o">/</span><span class="n">Examples</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">output</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">to</span> <span class="n">jaiswalsarang</span><span class="o">/</span><span class="n">jaiswalsarang</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span> <span class="n">denied</span> <span class="n">to</span> <span class="n">sarangjaiswal</span><span class="o">.</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">access</span> <span class="s1">&#39;https://github.com/jaiswalsarang/jaiswalsarang.github.io.git/&#39;</span><span class="p">:</span> <span class="n">The</span> <span class="n">requested</span> <span class="n">URL</span> <span class="n">returned</span> <span class="n">error</span><span class="p">:</span> <span class="mi">403</span>
+<span class="n">make</span><span class="p">:</span> <span class="o">***</span> <span class="p">[</span><span class="n">github</span><span class="p">]</span> <span class="n">Error</span> <span class="mi">128</span>
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/python.html">Python</a>
+      <a href="/tag/pelican.html">Pelican</a>
+      <a href="/tag/static-website.html">Static Website</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Sarang Jaiswal ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
