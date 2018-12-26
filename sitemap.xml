@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.sarangjaiswal.com/</loc>
-<lastmod>2018-12-26T10:35:06-00:00</lastmod>
+<lastmod>2018-12-26T11:36:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.sarangjaiswal.com/archives.html</loc>
-<lastmod>2018-12-26T10:35:06-00:00</lastmod>
+<lastmod>2018-12-26T11:36:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.sarangjaiswal.com/tags.html</loc>
-<lastmod>2018-12-26T10:35:06-00:00</lastmod>
+<lastmod>2018-12-26T11:36:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.sarangjaiswal.com/categories.html</loc>
-<lastmod>2018-12-26T10:35:06-00:00</lastmod>
+<lastmod>2018-12-26T11:36:03-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.sarangjaiswal.com/how-to-set-java_home-in-macos.html</loc>
+<lastmod>2018-12-26T00:00:00-06:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -67,6 +74,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://www.sarangjaiswal.com/category/java.html</loc>
+<lastmod>2018-12-26T00:00:00-05:51</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://www.sarangjaiswal.com/category/maven.html</loc>
 <lastmod>2018-12-26T00:00:00-05:51</lastmod>
 <changefreq>daily</changefreq>
@@ -88,7 +102,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.sarangjaiswal.com/tag/maven.html</loc>
+<loc>https://www.sarangjaiswal.com/tag/java.html</loc>
 <lastmod>2018-12-26T00:00:00-05:51</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -96,6 +110,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.sarangjaiswal.com/tag/configuration.html</loc>
+<lastmod>2018-12-26T00:00:00-05:51</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.sarangjaiswal.com/tag/maven.html</loc>
 <lastmod>2018-12-26T00:00:00-05:51</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>

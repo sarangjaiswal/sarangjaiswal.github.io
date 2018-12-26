@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/all.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2018-12-26T00:00:00-06:00</updated><subtitle>Automation Architect</subtitle><entry><title>Install Maven on MacOS</title><link href="https://www.sarangjaiswal.com/install-maven-on-macos.html" rel="alternate"></link><published>2018-12-26T00:00:00-06:00</published><updated>2018-12-26T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2018-12-26:/install-maven-on-macos.html</id><summary type="html">&lt;p&gt;&lt;img alt="Maven Logo" src="https://maven.apache.org/images/maven-logo-black-on-white.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/all.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2018-12-26T00:00:00-06:00</updated><subtitle>Automation Architect</subtitle><entry><title>How to Set JAVA_HOME in MacOS</title><link href="https://www.sarangjaiswal.com/how-to-set-java_home-in-macos.html" rel="alternate"></link><published>2018-12-26T00:00:00-06:00</published><updated>2018-12-26T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2018-12-26:/how-to-set-java_home-in-macos.html</id><summary type="html">&lt;p&gt;&lt;img alt="Java Logo" src="./images/Java_logo.png"&gt;&lt;/p&gt;
+&lt;p&gt;In this article we will discuss on how to set JAVA_HOME in MacOS&lt;/p&gt;
+&lt;h4&gt;Step 1: Add Java path to &lt;code&gt;.bash_profile&lt;/code&gt; file&lt;/h4&gt;
+&lt;p&gt;Open &lt;code&gt;.bash_profile&lt;/code&gt; file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SarangMac:~ sarangjaiswal$ vi .bash_profile 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add the following details to the file. ((Note: the JAVA_HOME path should be the path where you have installed Java))&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Setting PATH …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Java Logo" src="./images/Java_logo.png"&gt;&lt;/p&gt;
+&lt;p&gt;In this article we will discuss on how to set JAVA_HOME in MacOS&lt;/p&gt;
+&lt;h4&gt;Step 1: Add Java path to &lt;code&gt;.bash_profile&lt;/code&gt; file&lt;/h4&gt;
+&lt;p&gt;Open &lt;code&gt;.bash_profile&lt;/code&gt; file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SarangMac:~ sarangjaiswal$ vi .bash_profile 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add the following details to the file. ((Note: the JAVA_HOME path should be the path where you have installed Java))&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Setting PATH for JAVA
+export JAVA_HOME=$(/usr/libexec/java_home)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Step 2: Test Java Installation&lt;/h4&gt;
+&lt;p&gt;Close the terminal and open it again and fire below command to check if the installation was successful&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;sarangjaiswal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;io&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;span class="n"&gt;java&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1.8.0_191&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;Java&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TM&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="n"&gt;SE&lt;/span&gt; &lt;span class="n"&gt;Runtime&lt;/span&gt; &lt;span class="n"&gt;Environment&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt; &lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;_191&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b12&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;HotSpot&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TM&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Bit&lt;/span&gt; &lt;span class="n"&gt;Server&lt;/span&gt; &lt;span class="n"&gt;VM&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt; &lt;span class="mf"&gt;25.191&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b12&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mixed&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:~&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;$JAVA_HOME&lt;/span&gt;
+&lt;span class="sr"&gt;/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/&lt;/span&gt;&lt;span class="n"&gt;Home&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Java"></category><category term="Configuration"></category></entry><entry><title>Install Maven on MacOS</title><link href="https://www.sarangjaiswal.com/install-maven-on-macos.html" rel="alternate"></link><published>2018-12-26T00:00:00-06:00</published><updated>2018-12-26T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2018-12-26:/install-maven-on-macos.html</id><summary type="html">&lt;p&gt;&lt;img alt="Maven Logo" src="https://maven.apache.org/images/maven-logo-black-on-white.png"&gt;&lt;/p&gt;
 &lt;p&gt;In this article we will go over Maven installation on macOS. &lt;/p&gt;
 &lt;h4&gt;Step 1: Ensure JDK in already installed on your system&lt;/h4&gt;
 &lt;p&gt;Ensure &lt;code&gt;JAVA_HOME&lt;/code&gt; environment variable is set and points to your JDK installation&lt;/p&gt;
