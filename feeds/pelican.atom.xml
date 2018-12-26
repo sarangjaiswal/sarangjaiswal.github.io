@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal - Pelican</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/pelican.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2018-12-15T00:00:00-06:00</updated><subtitle>Automation Architect</subtitle><entry><title>Pelican - Static Site Generator - Custom Theme</title><link href="https://www.sarangjaiswal.com/pelican-static-site-generator-custom-theme.html" rel="alternate"></link><published>2018-12-15T00:00:00-06:00</published><updated>2018-12-15T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2018-12-15:/pelican-static-site-generator-custom-theme.html</id><summary type="html">&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal - Pelican</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/pelican.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2018-12-25T00:00:00-06:00</updated><subtitle>Automation Architect</subtitle><entry><title>Pelican - Static Site Generator - Custom Theme</title><link href="https://www.sarangjaiswal.com/pelican-static-site-generator-custom-theme.html" rel="alternate"></link><published>2018-12-15T00:00:00-06:00</published><updated>2018-12-25T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2018-12-15:/pelican-static-site-generator-custom-theme.html</id><summary type="html">&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
 &lt;p&gt;This is &lt;strong&gt;Part 3&lt;/strong&gt; article on &lt;code&gt;Pelican - Static Site Generator&lt;/code&gt;. In this article I will be covering following topics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;How to customize your Static Site with Pelican Themes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I would highly recommend you to read the following articles before begining with this one&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-part-1.html"&gt;Introduction to Pelican - Static Site …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
+&lt;li&gt;Part 1 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-basics.html#pelican-static-site-generator-basics"&gt;Introduction to Pelican - Static Site …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="GetPelican Logo" src="https://avatars2.githubusercontent.com/u/2043492?s=200&amp;amp;v=4"&gt;&lt;/p&gt;
 &lt;p&gt;This is &lt;strong&gt;Part 3&lt;/strong&gt; article on &lt;code&gt;Pelican - Static Site Generator&lt;/code&gt;. In this article I will be covering following topics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;How to customize your Static Site with Pelican Themes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I would highly recommend you to read the following articles before begining with this one&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-part-1.html"&gt;Introduction to Pelican - Static Site Generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-part-2.html"&gt;Building and Hosting Static Site on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 1 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-basics.html#pelican-static-site-generator-basics"&gt;Introduction to Pelican - Static Site Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2 - &lt;a href="https://www.sarangjaiswal.com/pelican-static-site-generator-hosted-on-github.html#pelican-static-site-generator-hosted-on-github"&gt;Building and Hosting Static Site on GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Pelican Themes&lt;/h2&gt;
 &lt;h3&gt;Clone a New Repository from GitHub&lt;/h3&gt;
