@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.sarangjaiswal.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.sarangjaiswal.com/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.sarangjaiswal.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://www.sarangjaiswal.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://www.sarangjaiswal.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://www.sarangjaiswal.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sarang Jaiswal Atom">
+
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="Sarang Jaiswal" />
+<meta name="description" content="SarangMac:Java sarangjaiswal$ mvn archetype:generate -Dfilter=serenity [INFO] Generating project in Interactive mode [INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0) Choose archetype: 1: remote -&gt; net.serenity-bdd:serenity-cucumber-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and Cucumber-JVM) 2: remote -&gt; net.serenity-bdd:serenity-jbehave-archetype …" />
+<meta name="keywords" content="Serenity, JBehave, Test Automation, Testing, Test Automation Framework, BDD">
+
+<meta property="og:site_name" content="Sarang Jaiswal"/>
+<meta property="og:title" content="Setup a Serenity-JBehave BDD Framework from Scratch"/>
+<meta property="og:description" content="SarangMac:Java sarangjaiswal$ mvn archetype:generate -Dfilter=serenity [INFO] Generating project in Interactive mode [INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0) Choose archetype: 1: remote -&gt; net.serenity-bdd:serenity-cucumber-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and Cucumber-JVM) 2: remote -&gt; net.serenity-bdd:serenity-jbehave-archetype …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://www.sarangjaiswal.com/setup-a-serenity-jbehave-bdd-framework-from-scratch.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-05-29 00:00:00-05:00"/>
+<meta property="article:modified_time" content="2018-12-29 00:00:00-06:00"/>
+<meta property="article:author" content="https://www.sarangjaiswal.com/author/sarang-jaiswal.html">
+<meta property="article:section" content="Test Automation"/>
+<meta property="article:tag" content="Serenity"/>
+<meta property="article:tag" content="JBehave"/>
+<meta property="article:tag" content="Test Automation"/>
+<meta property="article:tag" content="Testing"/>
+<meta property="article:tag" content="Test Automation Framework"/>
+<meta property="article:tag" content="BDD"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/b92b7b99e1314005a99da34a9e88e8a0?s=120">
+
+  <title>Sarang Jaiswal &ndash; Setup a Serenity-JBehave BDD Framework from Scratch</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://www.sarangjaiswal.com">
+        <img src="//s.gravatar.com/avatar/b92b7b99e1314005a99da34a9e88e8a0?s=120" alt="Sarang Jaiswal" title="Sarang Jaiswal">
+      </a>
+      <h1><a href="https://www.sarangjaiswal.com">Sarang Jaiswal</a></h1>
+
+<p>Automation Architect</p>
+
+      <ul class="social">
+          <li><a class="sc-linkedin" href="https://www.linkedin.com/in/sarangjaiswal" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li><a class="sc-github" href="https://github.com/sarangjaiswal" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li><a class="sc-instagram" href="https://www.instagram.com/_sarang82" target="_blank">
+            <i class="fab fa-instagram">
+            </i>
+          </a></li>
+          <li><a class="sc-twitter" href="https://twitter.com/_sarang82" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://www.sarangjaiswal.com">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://www.sarangjaiswal.com/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="setup-a-serenity-jbehave-bdd-framework-from-scratch">Setup a Serenity-JBehave BDD Framework from Scratch</h1>
+    <p>
+      Posted on May 29, 2019 in <a href="https://www.sarangjaiswal.com/category/test-automation.html">Test Automation</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p><img alt="Serenity BDD Logo|20%" src="http://thucydides.info/docs/serenity-staging/images/serenity-logo.png"></p>
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Java</span> <span class="n">sarangjaiswal$</span> <span class="n">mvn</span> <span class="n">archetype</span><span class="o">:</span><span class="n">generate</span> <span class="o">-</span><span class="n">Dfilter</span><span class="o">=</span><span class="n">serenity</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: remote -&gt; net.serenity-bdd:serenity-cucumber-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and Cucumber-JVM)
+2: remote -&gt; net.serenity-bdd:serenity-jbehave-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and JBehave)
+3: remote -&gt; net.serenity-bdd:serenity-junit-archetype (Serenity automated acceptance testing project using Selenium 2 and JUnit)
+4: remote -&gt; net.serenity-bdd:serenity-junit-screenplay-archetype (Serenity automated acceptance testing project using Screenplay, Selenium 2 and JUnit)
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 2
+Choose net.serenity-bdd:serenity-jbehave-archetype version: 
+1: 1.0.2
+2: 1.0.6
+3: 1.0.7
+4: 1.0.8
+5: 1.1.7
+6: 1.1.17
+7: 1.1.18
+8: 1.1.19
+9: 1.1.20
+10: 1.1.36
+11: 1.1.38
+12: 1.2.0
+13: 1.5.4
+14: 1.6.9
+15: 1.7.0
+16: 1.8.4
+Choose a number: 16: 16
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.pom (711 B at 6.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-archetypes/1.8.4/serenity-archetypes-1.8.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-archetypes/1.8.4/serenity-archetypes-1.8.4.pom (4.4 kB at 47 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.jar (6.1 kB at 65 kB/s)
+Define value for property &#39;groupId&#39;: com.sarangjaiswal.bdd 
+Define value for property &#39;artifactId&#39;: SerenityBDD
+Define value for property &#39;version&#39; 1.0-SNAPSHOT: : 1.0
+Define value for property &#39;package&#39; com.sarangjaiswal.bdd: : 
+Confirm properties configuration:
+groupId: com.sarangjaiswal.bdd
+artifactId: SerenityBDD
+version: 1.0
+package: com.sarangjaiswal.bdd
+ Y: : Y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: serenity-jbehave-archetype:1.8.4
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: artifactId, Value: SerenityBDD
+[INFO] Parameter: version, Value: 1.0
+[INFO] Parameter: package, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: packageInPathFormat, Value: com/sarangjaiswal/bdd
+[INFO] Parameter: package, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: version, Value: 1.0
+[INFO] Parameter: groupId, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: artifactId, Value: SerenityBDD
+[INFO] Project created from Archetype in dir: /Users/sarangjaiswal/Documents/Workspace/Java/SerenityBDD
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:51 min
+[INFO] Finished at: 2018-12-26T15:06:08-06:00
+[INFO] ------------------------------------------------------------------------
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">SarangMac</span><span class="o">:</span><span class="n">Java</span> <span class="n">sarangjaiswal$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+<span class="n">total</span> <span class="mi">0</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">6</span> <span class="n">sarangjaiswal</span>  <span class="n">staff</span>  <span class="mi">192</span> <span class="n">Dec</span> <span class="mi">26</span> <span class="mi">15</span><span class="o">:</span><span class="mi">06</span> <span class="n">SerenityBDD</span>
+<span class="n">SarangMac</span><span class="o">:</span><span class="n">Java</span> <span class="n">sarangjaiswal$</span> <span class="n">tree</span> <span class="n">SerenityBDD</span><span class="o">/</span>
+<span class="n">SerenityBDD</span><span class="o">/</span>
+<span class="err">├──</span> <span class="n">build</span><span class="o">.</span><span class="na">gradle</span>
+<span class="err">├──</span> <span class="n">pom</span><span class="o">.</span><span class="na">xml</span>
+<span class="err">├──</span> <span class="n">serenity</span><span class="o">.</span><span class="na">properties</span>
+<span class="err">└──</span> <span class="n">src</span>
+    <span class="err">└──</span> <span class="n">test</span>
+        <span class="err">├──</span> <span class="n">java</span>
+        <span class="err">│</span>   <span class="err">└──</span> <span class="n">com</span>
+        <span class="err">│</span>       <span class="err">└──</span> <span class="n">sarangjaiswal</span>
+        <span class="err">│</span>           <span class="err">└──</span> <span class="n">bdd</span>
+        <span class="err">│</span>               <span class="err">├──</span> <span class="n">AcceptanceTestSuite</span><span class="o">.</span><span class="na">java</span>
+        <span class="err">│</span>               <span class="err">├──</span> <span class="n">pages</span>
+        <span class="err">│</span>               <span class="err">│</span>   <span class="err">└──</span> <span class="n">DictionaryPage</span><span class="o">.</span><span class="na">java</span>
+        <span class="err">│</span>               <span class="err">└──</span> <span class="n">steps</span>
+        <span class="err">│</span>                   <span class="err">├──</span> <span class="n">DefinitionSteps</span><span class="o">.</span><span class="na">java</span>
+        <span class="err">│</span>                   <span class="err">└──</span> <span class="n">serenity</span>
+        <span class="err">│</span>                       <span class="err">└──</span> <span class="n">EndUserSteps</span><span class="o">.</span><span class="na">java</span>
+        <span class="err">└──</span> <span class="n">resources</span>
+            <span class="err">└──</span> <span class="n">stories</span>
+                <span class="err">├──</span> <span class="n">consult_dictionary</span>
+                <span class="err">│</span>   <span class="err">├──</span> <span class="n">LookupADefinition</span><span class="o">.</span><span class="na">story</span>
+                <span class="err">│</span>   <span class="err">└──</span> <span class="n">narrative</span><span class="o">.</span><span class="na">txt</span>
+                <span class="err">└──</span> <span class="n">update_definition</span>
+                    <span class="err">└──</span> <span class="n">narrative</span><span class="o">.</span><span class="na">txt</span>
+
+<span class="mi">13</span> <span class="n">directories</span><span class="o">,</span> <span class="mi">10</span> <span class="n">files</span>
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://www.sarangjaiswal.com/tag/serenity.html">Serenity</a>
+      <a href="https://www.sarangjaiswal.com/tag/jbehave.html">JBehave</a>
+      <a href="https://www.sarangjaiswal.com/tag/test-automation.html">Test Automation</a>
+      <a href="https://www.sarangjaiswal.com/tag/testing.html">Testing</a>
+      <a href="https://www.sarangjaiswal.com/tag/test-automation-framework.html">Test Automation Framework</a>
+      <a href="https://www.sarangjaiswal.com/tag/bdd.html">BDD</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sarangjaiswal';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy;  2019 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Sarang Jaiswal ",
+  "url" : "https://www.sarangjaiswal.com",
+  "image": "//s.gravatar.com/avatar/b92b7b99e1314005a99da34a9e88e8a0?s=120",
+  "description": "Sarang Jaiswal's Thoughts and Writings"
+}
+</script>
+
+</body>
+</html>

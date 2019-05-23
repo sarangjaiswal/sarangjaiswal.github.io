@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/all.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2019-01-01T00:00:00-06:00</updated><subtitle>Automation Architect</subtitle><entry><title>NLTK Basics &amp; Definations.</title><link href="https://www.sarangjaiswal.com/nltk-basics-definations.html" rel="alternate"></link><published>2019-01-01T00:00:00-06:00</published><updated>2019-01-01T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2019-01-01:/nltk-basics-definations.html</id><summary type="html">&lt;p&gt;&lt;img alt="NLTK Python logo" src="./images/nltkpython.jpeg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sarang Jaiswal</title><link href="https://www.sarangjaiswal.com/" rel="alternate"></link><link href="https://www.sarangjaiswal.com/feeds/all.atom.xml" rel="self"></link><id>https://www.sarangjaiswal.com/</id><updated>2019-05-29T00:00:00-05:00</updated><subtitle>Automation Architect</subtitle><entry><title>Setup a Serenity-JBehave BDD Framework from Scratch</title><link href="https://www.sarangjaiswal.com/setup-a-serenity-jbehave-bdd-framework-from-scratch.html" rel="alternate"></link><published>2019-05-29T00:00:00-05:00</published><updated>2018-12-29T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2019-05-29:/setup-a-serenity-jbehave-bdd-framework-from-scratch.html</id><summary type="html">&lt;p&gt;&lt;img alt="Serenity BDD Logo|20%" src="http://thucydides.info/docs/serenity-staging/images/serenity-logo.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;archetype&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Dfilter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;serenity&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: remote -&amp;gt; net.serenity-bdd:serenity-cucumber-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and Cucumber-JVM)
+2: remote -&amp;gt; net.serenity-bdd:serenity-jbehave-archetype …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Serenity BDD Logo|20%" src="http://thucydides.info/docs/serenity-staging/images/serenity-logo.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;archetype&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Dfilter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;serenity&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: remote -&amp;gt; net.serenity-bdd:serenity-cucumber-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and Cucumber-JVM)
+2: remote -&amp;gt; net.serenity-bdd:serenity-jbehave-archetype (Serenity automated acceptance testing project using Selenium 2, JUnit and JBehave)
+3: remote -&amp;gt; net.serenity-bdd:serenity-junit-archetype (Serenity automated acceptance testing project using Selenium 2 and JUnit)
+4: remote -&amp;gt; net.serenity-bdd:serenity-junit-screenplay-archetype (Serenity automated acceptance testing project using Screenplay, Selenium 2 and JUnit)
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 2
+Choose net.serenity-bdd:serenity-jbehave-archetype version: 
+1: 1.0.2
+2: 1.0.6
+3: 1.0.7
+4: 1.0.8
+5: 1.1.7
+6: 1.1.17
+7: 1.1.18
+8: 1.1.19
+9: 1.1.20
+10: 1.1.36
+11: 1.1.38
+12: 1.2.0
+13: 1.5.4
+14: 1.6.9
+15: 1.7.0
+16: 1.8.4
+Choose a number: 16: 16
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.pom (711 B at 6.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-archetypes/1.8.4/serenity-archetypes-1.8.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-archetypes/1.8.4/serenity-archetypes-1.8.4.pom (4.4 kB at 47 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/net/serenity-bdd/serenity-jbehave-archetype/1.8.4/serenity-jbehave-archetype-1.8.4.jar (6.1 kB at 65 kB/s)
+Define value for property &amp;#39;groupId&amp;#39;: com.sarangjaiswal.bdd 
+Define value for property &amp;#39;artifactId&amp;#39;: SerenityBDD
+Define value for property &amp;#39;version&amp;#39; 1.0-SNAPSHOT: : 1.0
+Define value for property &amp;#39;package&amp;#39; com.sarangjaiswal.bdd: : 
+Confirm properties configuration:
+groupId: com.sarangjaiswal.bdd
+artifactId: SerenityBDD
+version: 1.0
+package: com.sarangjaiswal.bdd
+ Y: : Y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: serenity-jbehave-archetype:1.8.4
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: artifactId, Value: SerenityBDD
+[INFO] Parameter: version, Value: 1.0
+[INFO] Parameter: package, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: packageInPathFormat, Value: com/sarangjaiswal/bdd
+[INFO] Parameter: package, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: version, Value: 1.0
+[INFO] Parameter: groupId, Value: com.sarangjaiswal.bdd
+[INFO] Parameter: artifactId, Value: SerenityBDD
+[INFO] Project created from Archetype in dir: /Users/sarangjaiswal/Documents/Workspace/Java/SerenityBDD
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:51 min
+[INFO] Finished at: 2018-12-26T15:06:08-06:00
+[INFO] ------------------------------------------------------------------------
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ltr&lt;/span&gt;
+&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;  &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal&lt;/span&gt;  &lt;span class="n"&gt;staff&lt;/span&gt;  &lt;span class="mi"&gt;192&lt;/span&gt; &lt;span class="n"&gt;Dec&lt;/span&gt; &lt;span class="mi"&gt;26&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;06&lt;/span&gt; &lt;span class="n"&gt;SerenityBDD&lt;/span&gt;
+&lt;span class="n"&gt;SarangMac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal$&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="n"&gt;SerenityBDD&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;SerenityBDD&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;gradle&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;xml&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;serenity&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;properties&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;
+    &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
+        &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;sarangjaiswal&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;bdd&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;               &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;AcceptanceTestSuite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;java&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;               &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;               &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;DictionaryPage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;java&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;               &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;steps&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;                   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;DefinitionSteps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;java&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;                   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;serenity&lt;/span&gt;
+        &lt;span class="err"&gt;│&lt;/span&gt;                       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;EndUserSteps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;java&lt;/span&gt;
+        &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;resources&lt;/span&gt;
+            &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;stories&lt;/span&gt;
+                &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;consult_dictionary&lt;/span&gt;
+                &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;LookupADefinition&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;story&lt;/span&gt;
+                &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;narrative&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;txt&lt;/span&gt;
+                &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;update_definition&lt;/span&gt;
+                    &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;narrative&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;txt&lt;/span&gt;
+
+&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="n"&gt;directories&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Serenity"></category><category term="JBehave"></category><category term="Test Automation"></category><category term="Testing"></category><category term="Test Automation Framework"></category><category term="BDD"></category></entry><entry><title>NLTK Basics &amp; Definations.</title><link href="https://www.sarangjaiswal.com/nltk-basics-definations.html" rel="alternate"></link><published>2019-01-01T00:00:00-06:00</published><updated>2019-01-01T00:00:00-06:00</updated><author><name>Sarang Jaiswal</name></author><id>tag:www.sarangjaiswal.com,2019-01-01:/nltk-basics-definations.html</id><summary type="html">&lt;p&gt;&lt;img alt="NLTK Python logo" src="./images/nltkpython.jpeg"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Tokenization&lt;/strong&gt; is a method of breaking up a piece of text into many pieces, such as sentences and words.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Corpus&lt;/strong&gt; is a collection of text documents, and corpora is the plural of corpus. This comes from the Latin word for body; in this case, a body of text. So a …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="NLTK Python logo" src="./images/nltkpython.jpeg"&gt;&lt;/p&gt;
